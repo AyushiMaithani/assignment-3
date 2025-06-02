@@ -66,86 +66,271 @@ export const pujaCategories = [
     id: 'puran-katha', 
     label: 'Puran Katha', 
     items: [
-      "Bhagwat Katha",
-      "Shiv Maha Puran",
-      "Ram Katha",
-      "Shrimad Devi Bhagwat Puran",
-      "Vishnu Puran Katha",
-      "Bhaktmal Katha"
-    ] 
+      {
+        name: "Bhagwat Katha",
+        shloka: "श्रवणं कीर्तनं विष्णोः स्मरणं पादसेवनम्।",
+        meaning: "Narrates the divine pastimes of Lord Krishna to inspire devotion and detachment.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Shiv Maha Puran",
+        shloka: "ॐ नमः शिवाय तस्मै शिवायै च नमो नमः।",
+        meaning: "Glorifies Lord Shiva's cosmic roles and the path to liberation through Shiva-bhakti.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Ram Katha",
+        shloka: "रामो राजमणिः सदा विजयते रामं रमेशं भजे।",
+        meaning: "Tells the divine life story of Lord Rama as an ideal of dharma and virtue.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Shrimad Devi Bhagwat Puran",
+        shloka: "या देवी सर्वभूतेषु मातृरूपेण संस्थिता।",
+        meaning: "Celebrates the supreme feminine power as the origin of all creation and energy.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Vishnu Puran Katha",
+        shloka: "ॐ नमो भगवते वासुदेवाय।",
+        meaning: "Describes the cosmic functions and avatars of Lord Vishnu to uphold dharma.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Bhaktmal Katha",
+        shloka: "भक्तिहि परमं श्रेयः सर्वपापःै प्रमोचनी।",
+        meaning: "Chronicles the lives of saints and devotees, emphasizing the glory of pure devotion.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      }
+    ]
   },
   { 
     id: 'shanti-puja', 
     label: 'Shanti Puja', 
     items: [
-      "Narayanbali Pitrushraddh Vidhi",
-      "KaalSharp Yog Shanti",
-      "Nakshatra Shanti",
-      "Vastu Shanti",
-      "NavGrah Shanti",
-      "Manglik Dosh Shanti",
-      "Shani Shanti",
-      "Guru Shanti",
-      "Rahu Shanti",
-      "Grih Pravesh",
-      "Office Grah Shanti",
-      "Sourya Mandal Shanti"
-    ] 
-  },
-  { 
-    id: 'yagna', 
-    label: 'Yagna', 
-    items: [
-      "Ramarcha Pooja",
-      "Shat Chandi Yagna",
-      "Banglamukhi Jaap",
-      "Sri Suktam Havan",
-      "Maha Mrityunjay Jap",
-      "Vishnu Yagna",
-      "Navchandi Yagna",
-      "Ekadashi Yagna"
-    ] 
+      {
+        name: "Narayanbali Pitrushraddh Vidhi",
+        shloka: "ॐ नारायणाय नमः पितृभ्यः स्वधा।",
+        meaning: "A sacred rite to appease departed souls and seek ancestral peace.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Kaal Sarp Yog Shanti",
+        shloka: "ॐ नमः नागाय कालसर्पशान्तये।",
+        meaning: "Performed to neutralize Kaal Sarp Dosha and bring life balance.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Nakshatra Shanti",
+        shloka: "नक्षत्रदेवताभ्यः नमः शान्तिं कुरु कुर्वस्व नः।",
+        meaning: "Performed for pacifying the birth star and promoting positive destiny.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Vastu Shanti",
+        shloka: "वास्तोष्पतये नमः गृहे सुखं शान्तिम् च देहि।",
+        meaning: "Invoked for harmony and peace in residential or workplace energy.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "NavGrah Shanti",
+        shloka: "ॐ आदित्याय च सोमाय मङ्गलाय बुधाय च।",
+        meaning: "Dedicated to pacify all nine planets for well-being and prosperity.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Manglik Dosh Shanti",
+        shloka: "अंगारकाय नमो नमः, दोषं हरतु मे प्रभो।",
+        meaning: "Performed to nullify Manglik dosha for marital harmony.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Shani Shanti",
+        shloka: "ॐ शनशैचराय नमः।",
+        meaning: "Aims to reduce Shani’s negative effects and invoke discipline.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Guru Shanti",
+        shloka: "देवानां च ऋषीणां च गुरूं काञ्जनसन्निभम्।",
+        meaning: "Brings wisdom and relief from Guru dosha or weak Jupiter.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+
+      },
+       {
+        name: "Rahu Shanti",
+        shloka: "ॐ राहवे नमः कालदोषविनाशनाय।",
+        meaning: "For removing illusions, delays, and Rahu-related troubles.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Grih Pravesh",
+        shloka: "मंगलं भगवान् विष्णुः मंगलं मधुसूदनः।",
+        meaning: "A sacred entry ceremony invoking divine blessings for the new home.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Office Grah Shanti",
+        shloka: "श्री गणेशाय नमः सर्वकार्यसिद्धये।",
+        meaning: "Performed for success, peace, and growth in the workplace.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Sourya Mandal Shanti",
+        shloka: "सप्तसप्तः सूर्यराजः सौर्यमण्डलशान्तये।",
+        meaning: "Dedicated to solar forces for cosmic harmony and inner vitality.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      }
+    ]
   },
   { 
     id: 'sanskar-vidhi', 
     label: 'Sanskar Vidhi', 
     items: [
-      "Namkaran Sanskar",
-      "Mundan Sanskar",
-      "Yagnopavit Sanskar",
-      "Vivah Sanskar",
-      "Annaprashan Sanskar",
-      "Vidya Aarambh Sanskar",
-      "Antyoshti Sanskar"
-    ] 
+      {
+        name: "Namkaran Sanskar",
+        shloka: "नामदेयं शुभं कुर्यात् सर्वसंपद्विवृद्धये।",
+        meaning: "Naming the child to bless identity, auspiciousness, and good fortune.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Mundan Sanskar",
+        shloka: "मुण्डनं कर्म शुद्ध्यर्थं बालस्य शुभवृद्धये।",
+        meaning: "Shaving the first hair for purification and healthy growth.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Yagnopavit Sanskar",
+        shloka: "गायत्रीं चापि जपतो ब्राह्मणो भवति द्विजः।",
+        meaning: "Marks the spiritual rebirth and beginning of Vedic education.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Vivah Sanskar",
+        shloka: "सहधर्मचारिणी त्वं मे साक्षिणो वदत प्रतिज्ञां।",
+        meaning: "The sacred union of two souls for a life of shared dharma.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Annaprashan Sanskar",
+        shloka: "अन्नं ब्रह्मेत्युपासीत प्राणा अन्नेन जायन्ते।",
+        meaning: "First feeding ritual marking the transition to solid food.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Vidya Aarambh Sanskar",
+        shloka: "सरस्वत्यै नमो नित्यं भक्तयोगसमन्वितम्।",
+        meaning: "Initiating the child into learning and worship of knowledge.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Antyeshti Sanskar",
+        shloka: "अग्नियंमं पुरोगं कृत्वा प्रेतस्य गच्छतोऽनुगामम्।",
+        meaning: "Final rite to release the soul from the body and aid its journey.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      }
+    ]
   },
-  { 
-    id: 'sthapan-puja', 
-    label: 'Sthapan Puja', 
+   {
+    id: 'sthapan-puja',
+    label: 'Sthapan Puja',
     items: [
-      "Ghat Sthapna",
-      "Rudra Abhishek",
-      "Laghu Rudra",
-      "Maha Rudra Pooja",
-      "Ati Rudra Pooja",
-      "Murti Pranpratishtha",
-      "Yantra Sthapana"
-    ] 
+      {
+        name: "Ghat Sthapna",
+        shloka: "कलशं पूज्येन्नित्यं मङ्गल्यं पुण्यवर्धनम्।",
+        meaning: "Establishes the sacred pot as a symbol of divine presence and purity.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Rudra Abhishek",
+        shloka: "ॐ नमो भगवते रुद्राय।",
+        meaning: "A sacred bathing ritual of Shiva for peace, health, and blessings.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Laghu Rudra",
+        shloka: "रुद्रं जपेत श्रद्धया यः स भवेद् समृद्धिमान्।",
+        meaning: "A condensed chanting of Rudram to invoke Shiva’s grace and prosperity.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Maha Rudra Pooja",
+        shloka: "रुद्राणां सहस्रेण शिवं यजामहे सदा।",
+        meaning: "Grand invocation of Lord Shiva through extensive Rudram recitation.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Ati Rudra Pooja",
+        shloka: "सहस्रं रुद्रजपस्य महापुण्यफलप्रदः।",
+        meaning: "Supreme Shiva Yagna involving 14641 Rudram chants for cosmic balance.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Murti Pranpratishtha",
+        shloka: "आवाहितं तु यं देवं प्राणैः संप्रतिष्ठतम्।",
+        meaning: "Ritual to invoke life-force into a deity idol to make it divine.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Yantra Sthapana",
+        shloka: "यन्त्रे देवतायाः स्थानं साक्षात् सिद्धिप्रदं भवेत।",
+        meaning: "Installing sacred diagrams to channel divine energy and fulfill intentions.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      }
+    ]
   },
-  { 
-    id: 'festival-puja', 
-    label: 'Festival Puja', 
+  {
+    id: 'festival-puja',
+    label: 'Festival Puja',
     items: [
-      "Saraswati Pooja",
-      "Kali Pooja",
-      "Durga Pooja",
-      "Vishwakarma Pooja",
-      "Ganesh Pooja",
-      "SatyaNarayan Pooja",
-      "Mahadev Pooja",
-      "Janamasti Pooja",
-      "Ramnavmi Pooja",
-      "MahaShivratri Pooja"
-    ] 
+      {
+        name: "Saraswati Pooja",
+        shloka: "या कुन्देन्दु तुषारहार धवला या शुभ्रवस्त्रावृता।",
+        meaning: "Worshipped to seek blessings of knowledge, wisdom, and learning.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Kali Pooja",
+        shloka: "नमः पावत्यै कालरात्र्यै नमोऽस्तु ते नमः शिवायै।",
+        meaning: "Dedicated to Goddess Kali for strength, protection, and destruction of evil.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Durga Pooja",
+        shloka: "या देवी सर्वभूतेषु शक्तिरूपेण संस्थिता।",
+        meaning: "Performed to honor the divine feminine energy that protects and nurtures.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Vishwakarma Pooja",
+        shloka: "शिल्पानां पतये नमः विश्वकर्मणे नमो नमः।",
+        meaning: "Offered to the divine architect for success in engineering and craftsmanship.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Ganesh Pooja",
+        shloka: "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।",
+        meaning: "Invoked at the start of all rituals for wisdom and obstacle removal.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Satya Narayan Pooja",
+        shloka: "सत्यं वद धर्मं चर सत्यनारायणं भजे।",
+        meaning: "Done to seek truth, prosperity, and blessings of Lord Vishnu.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+       {
+        name: "Mahadev Pooja",
+        shloka: "ॐ नमः शिवाय।",
+        meaning: "Performed for inner peace, destruction of sins, and spiritual growth.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        name: "Janmashtami Pooja",
+        shloka: "वासुदेवसुतं देवं कंसचाणूरमर्दनम्।",
+        meaning: "Celebrates the birth of Lord Krishna, the divine protector and guide.",
+        image: "https://images.pexels.com/photos/15902853/pexels-photo-15902853/free-photo-of-beautiful-idols-of-lord-ganesha-and-devi-parvati-being-worshipped-at-a-hindu-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      }
+    ]
   }
 ];

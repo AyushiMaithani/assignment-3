@@ -1,8 +1,24 @@
 const TextCard = ({ item }) => {
   return (
-    <div className="aspect-square min-w-[200px] max-w-[250px] flex-shrink-0 shadow-lg rounded-lg overflow-hidden border border-gray-200">
-      <div className="p-6 flex items-center justify-center h-full">
-        <h3 className="text-xl font-bold text-center text-orange-600">{item}</h3>
+    <div className="flex flex-col shadow-lg rounded-lg overflow-hidden border border-gray-200 w-[200px] sm:w-[225px] md:w-[280px]">
+      <img
+        src={item.image}
+        alt={item.name}
+        className="w-full h-40 object-cover"
+      />
+      <div className="p-4 flex flex-col justify-between flex-grow">
+        <h3 className="text-lg mb-2 font-bold text-center text-orange-600">
+          {item.name}
+        </h3>
+        <p className="text-sm mb-2 gray-700 truncate">
+          <strong>Shloka:</strong> {item.shloka}
+        </p>
+        <p className="text-sm text-gray-700 truncate">
+          <strong>Meaning:</strong> {item.meaning}
+        </p>
+        <button className="mt-2 px-4 py-2 text-orange-600 border-1 border-orange-600 rounded hover:bg-orange-600 hover:text-white">
+          Schedule Pooja
+        </button>
       </div>
     </div>
   );
