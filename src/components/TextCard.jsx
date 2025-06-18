@@ -10,11 +10,11 @@ const TextCard = ({ item }) => {
         <h3 className="text-lg mb-2 font-bold text-center text-orange-600">
           {item.name}
         </h3>
-        <p className="text-sm mb-2 gray-700 truncate">
-          <strong>Shloka:</strong> {item.shloka}
+        <p className="text-sm text-center mb-2 gray-700 truncate">
+          {item.shloka}
         </p>
         <p className="text-sm text-gray-700 truncate">
-          <strong>Meaning:</strong> {item.meaning}
+          {item.meaning}
         </p>
         <button className="mt-2 px-4 py-2 text-orange-600 border-1 border-orange-600 rounded hover:bg-orange-600 hover:text-white">
           Schedule Pooja

@@ -104,6 +104,60 @@ export const pujaCategories = [
       }
     ]
   },
+  {
+  id: 'yagna',
+  label: 'Yagna',
+  items: [
+    {
+      name: "Ramarcha Pooja",
+      shloka: "श्रीरामं रामभद्रं च रामचन्द्रं नमोऽस्तुते।",
+      meaning: "Worship of Lord Rama to invoke dharma, devotion, and righteousness.",
+      image: "https://images.pexels.com/photos/16934589/pexels-photo-16934589/free-photo-of-ram-darbar-statues-on-a-pink-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      name: "Shat Chandi Yagna",
+      shloka: "जयति मंगला काली भद्रकाली कपालिनी।",
+      meaning: "A grand yagna invoking Goddess Durga through 700 verses for divine victory over evil.",
+      image: "https://images.pexels.com/photos/14484892/pexels-photo-14484892/free-photo-of-durga-idol-on-display-during-durga-puja.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      name: "Baglamukhi Jaap",
+      shloka: "ॐ ह्लीं बगलामुखि सर्वदुष्टानां वाचं मुखं पदं स्तम्भय।",
+      meaning: "Performed to paralyze enemies and overcome disputes and legal issues.",
+      image: "https://images.pexels.com/photos/17345217/pexels-photo-17345217/free-photo-of-close-up-shot-of-a-hindu-deity-idol.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      name: "Sri Suktam Havan",
+      shloka: "ॐ हिरण्यवर्णां हरिणीं सुवर्णरजतस्रजाम्।",
+      meaning: "A sacred fire ritual to invoke Goddess Lakshmi for wealth and prosperity.",
+      image: "https://images.pexels.com/photos/14813172/pexels-photo-14813172/free-photo-of-idol-of-hindu-goddess-lakshmi.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      name: "Maha Mrityunjaya Jaap",
+      shloka: "ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्।",
+      meaning: "A life-saving mantra for health, healing, and protection from untimely death.",
+      image: "https://images.pexels.com/photos/15899898/pexels-photo-15899898/free-photo-of-idol-of-lord-shiva.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      name: "Vishnu Yagna",
+      shloka: "ॐ नमो नारायणाय।",
+      meaning: "Offered to Lord Vishnu for preservation, peace, and universal harmony.",
+      image: "https://images.pexels.com/photos/15899232/pexels-photo-15899232/free-photo-of-statue-of-lord-vishnu-in-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      name: "Navchandi Yagna",
+      shloka: "ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चे।",
+      meaning: "A powerful yagna for nine forms of Durga to remove planetary and karmic doshas.",
+      image: "https://images.pexels.com/photos/14484892/pexels-photo-14484892/free-photo-of-durga-idol-on-display-during-durga-puja.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      name: "Ekadashi Yagna",
+      shloka: "एकादश्यां समर्च्यं तर्प्यं च विष्णोः प्रियतमा तिथि।",
+      meaning: "Observed with fasting and offerings to purify the soul and attain divine grace.",
+      image: "https://images.pexels.com/photos/15899232/pexels-photo-15899232/free-photo-of-statue-of-lord-vishnu-in-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    }
+  ]
+},
   { 
     id: 'shanti-puja', 
     label: 'Shanti Puja', 
