@@ -1,6 +1,6 @@
 const TextCard = ({ item }) => {
   return (
-    <div className="flex flex-col shadow-lg rounded-lg overflow-hidden border border-gray-200 w-[200px] sm:w-[225px] md:w-[280px]">
+    <div className="flex flex-col shadow-lg rounded-lg overflow-hidden border border-gray-200 w-[280px] sm:w-[225px] md:w-[280px]">
       <img
         src={item.image}
         alt={item.name}

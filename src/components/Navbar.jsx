@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { pujaCategories } from '../constant/cardData';
 import TextCardList from './TextCardList';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Navbar = () => {
   const [activeTab, setActiveTab] = useState('puran-katha');
+
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
 
   const activeIndex = pujaCategories.findIndex(cat => cat.id === activeTab);
   const activeCategory = pujaCategories[activeIndex];
@@ -19,8 +21,32 @@ const Navbar = () => {
     setActiveTab(pujaCategories[nextIndex].id);
   };
 
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.changedTouches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    touchEndX.current = e.changedTouches[0].clientX;
+    handleSwipe();
+  };
+
+  const handleSwipe = () => {
+    const deltaX = touchStartX.current - touchEndX.current;
+    if (Math.abs(deltaX) > 50) {
+      if (deltaX > 0) {
+        handleNext();
+      } else {
+        handlePrev();
+      }
+    }
+  };
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="hidden md:flex flex-wrap justify-center gap-4 md:gap-6 bg-white shadow-md rounded-full p-2 border border-green-500 w-fit mx-auto">
         {pujaCategories.map((category) => (
           <button
@@ -41,14 +67,11 @@ const Navbar = () => {
         <span className="text-lg font-semibold text-gray-800 px-4 whitespace-nowrap max-w-[150px] overflow-hidden text-ellipsis">
           {activeCategory?.label || 'No category'}
         </span>
-
       </div>
 
       <div className="mt-10">
         {activeCategory ? (
-          <>
-            <TextCardList items={activeCategory.items} />
-          </>
+          <TextCardList items={activeCategory.items} />
         ) : (
           <p className="text-center text-gray-500">No items available.</p>
         )}

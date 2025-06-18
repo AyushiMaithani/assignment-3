@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import TextCard from './TextCard';
 import { motion } from 'framer-motion';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -9,7 +9,7 @@ const TextCardList = ({ items }) => {
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollBy({
-        left: -250,
+        left: -300,
         behavior: 'smooth',
       });
     }
@@ -18,11 +18,26 @@ const TextCardList = ({ items }) => {
   const scrollRight = () => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollBy({
-        left: 250,
+        left: 300,
         behavior: 'smooth',
       });
     }
   };
+
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    let interval;
+
+    if (isMobile) {
+      interval = setInterval(() => {
+        scrollRight();
+      }, 8000);
+    }
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, []);
 
   return (
     <div className="relative">
