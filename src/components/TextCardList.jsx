@@ -1,10 +1,20 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import TextCard from './TextCard';
 import { motion } from 'framer-motion';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const TextCardList = ({ items }) => {
   const scrollContainerRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const updateScrollButtons = () => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      setCanScrollLeft(container.scrollLeft > 0);
+      setCanScrollRight(container.scrollLeft + container.clientWidth < container.scrollWidth - 1);
+    }
+  };
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -25,13 +35,32 @@ const TextCardList = ({ items }) => {
   };
 
   useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    updateScrollButtons();
+
+    const handleScroll = () => {
+      updateScrollButtons();
+    };
+
+    container.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', updateScrollButtons);
+
+    return () => {
+      container.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', updateScrollButtons);
+    };
+  }, []);
+
+  useEffect(() => {
     const isMobile = window.innerWidth < 768;
     let interval;
 
     if (isMobile) {
       interval = setInterval(() => {
         scrollRight();
-      }, 8000);
+      }, 2000);
     }
 
     return () => {
@@ -45,7 +74,10 @@ const TextCardList = ({ items }) => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         onClick={scrollLeft}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-md border border-gray-300 rounded-full p-2 hover:bg-orange-100 transition"
+        disabled={!canScrollLeft}
+        className={`absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-md border border-gray-300 rounded-full p-2 transition ${
+          !canScrollLeft ? 'opacity-50 cursor-not-allowed' : 'hover:bg-orange-100'
+        }`}
       >
         <FaChevronLeft className="text-orange-600" />
       </motion.button>
@@ -62,7 +94,10 @@ const TextCardList = ({ items }) => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         onClick={scrollRight}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-md border border-gray-300 rounded-full p-2 hover:bg-orange-100 transition"
+        disabled={!canScrollRight}
+        className={`absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-md border border-gray-300 rounded-full p-2 transition ${
+          !canScrollRight ? 'opacity-50 cursor-not-allowed' : 'hover:bg-orange-100'
+        }`}
       >
         <FaChevronRight className="text-orange-600" />
       </motion.button>
